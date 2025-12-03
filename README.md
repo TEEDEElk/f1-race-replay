@@ -2,8 +2,6 @@
 
 A Python application for visualizing Formula 1 race telemetry and replaying race events with interactive controls and a graphical interface.
 
-![Race Replay Preview](./resources/preview.png)
-
 ## Features
 
 - **Race Replay Visualization:** Watch the race unfold with real-time driver positions on a rendered track.
@@ -24,11 +22,12 @@ A Python application for visualizing Formula 1 race telemetry and replaying race
 ## Requirements
 
 - Python 3.8+
-- [FastF1](https://github.com/theOehrly/Fast-F1)
-- [Arcade](https://api.arcade.academy/en/latest/)
+- FastF1
+- Arcade
 - numpy
 
 Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -38,16 +37,19 @@ FastF1 cache folder will be created automatically on first run. If it is not cre
 ## Usage
 
 Run the main script and specify the year and round:
+
 ```bash
 python main.py --year 2025 --round 12
 ```
 
 To run a Sprint session (if the event has one), add `--sprint`:
+
 ```bash
 python main.py --year 2025 --round 12 --sprint
 ```
 
 The application will load a pre-computed telemetry dataset if you have run it before for the same event. To force re-computation of telemetry data, use the `--refresh-data` flag:
+
 ```bash
 python main.py --year 2025 --round 12 --refresh-data
 ```
@@ -71,9 +73,9 @@ python main.py --year 2025 --round 12 --refresh-data
 
 Please see [roadmap.md](./roadmap.md) for planned features and project vision.
 
-# Known Issues
+## Known Issues
 
-- The leaderboard appears to be inaccurate for the first few corners of the race. The leaderboard is also temporarily affected by a driver going in the pits. At the end of the race the leadeboard is sometimes affected by the drivers final x,y positions being further ahead than other drivers. These issues are known issues caused by innacuracies in the telemetry and being worked on for future releases. Its likely that these issues will be fixed in stages as improving the leaderboard accuracy is a complex task.
+The leaderboard appears to be inaccurate for the first few corners of the race. The leaderboard is also temporarily affected by a driver going in the pits. At the end of the race the leaderboard is sometimes affected by the drivers final x,y positions being further ahead than other drivers. These issues are known issues caused by inaccuracies in the telemetry and being worked on for future releases. It's likely that these issues will be fixed in stages as improving the leaderboard accuracy is a complex task.
 
 ## 📝 License
 
@@ -85,4 +87,5 @@ No copyright infringement intended. Formula 1 and related trademarks are the pro
 
 ---
 
-Built with ❤️ by [Tom Shaw](https://tomshaw.dev)
+Built with ❤️ by Tharinda Dhanush
+
